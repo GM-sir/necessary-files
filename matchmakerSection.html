@@ -1,0 +1,37 @@
+<div class="container text-center">
+    <h2 class="mb-4">Find Your Perfect Plant</h2>
+    <form id="plantForm">
+        <div class="mb-3">
+            <label class="form-label">How much sunlight does your space get?</label>
+            <select class="form-select" id="sunlight">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">How often do you water plants?</label>
+            <select class="form-select" id="watering">
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-success" onclick="findPlant()">Find My Plant</button>
+    </form>
+    <div class="mt-4" id="result"></div>
+</div>
+
+<style>
+    body {
+            background-color: #f5f5dc;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+</style>
