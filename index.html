@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+         * {
+     font-family: "Inter", sans-serif;
+ }
+
+ .Card_section {
+     padding: 30px 100px 30px 100px;
+     /* border: 2px solid red; */
+ }
+
+ .Card_section .section_head h1 {
+     text-align: center;
+ }
+
+ .Card_section .section_head .head_para {
+     opacity: 70%;
+     text-align: center;
+ }
+
+ .Card_section .section_container {
+     width: 1440px;
+     height: 1000px;
+     /* border: 2px solid red; */
+     margin-top: 80px;
+     gap: 80px;
+     display: flex;
+
+ }
+
+ .Card_section .section_container .cards {
+     width: 1000px;
+     height: 800px;
+     gap: 30px;
+     /* border: 2px solid red; */
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+ }
+
+ .Card_section .section_container .cards .card {
+     height: 550px;
+     width: 400px;
+     border: 1px solid black;
+     border-radius: 20px;
+     overflow: hidden;
+
+ }
+
+ .Card_section .section_container .cards .card .card_body {
+     /* margin-top: 40px; */
+     padding: 40px 10px 20px 20px;
+
+ }
+
+ .Card_section .section_container .cards .card .card_body .head_text {
+     font-size: 18px;
+     font-weight: 600;
+     line-height: 30px;
+     margin-bottom: 10px;
+ }
+
+ .Card_section .section_container .cards .card .card_body .para_text {
+     font-size: 15px;
+     opacity: 70%;
+     line-height: 22px;
+ }
+
+
+ .sub_btn {
+     height: 80px;
+     width: 300px;
+     border: 2px solid red;
+     margin: 10px 0px 10px 0px;
+     gap: 10px;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .sub_btn .frame {
+     height: 25px;
+     width: 60px;
+     border-radius: 10px;
+     background-color: blue;
+
+ }
+
+ .sub_btn .frame_text {
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .btns {
+     height: 50px;
+     width: 350px;
+     border: 1px solid black;
+ }
+
+ .btns .btn1 {
+     height: 30px;
+     width: 180px;
+     border-radius: 20px;
+     background: transparent;
+     background-color: black;
+ }
+    </style>    
+
+
+
+</head>
+
+<body>
+    <section class="Card_section">
+        <div class="section_head">
+            <div class="head_head">
+                <h1>Featured Projects</h1>
+            </div>
+            <div class="head_para">
+                A selection of projects that showcase my skills and experience in full-stack development
+            </div>
+        </div>
+        <div class="section_container">
+            <div class="cards">
+                <div class="card">
+                    <div class="card_head">
+                        <img src="./images/c.png" height="200px" width="400px">
+                    </div>
+                    <div class="card_body">
+                        <div class="head_text">
+                            E-Commerce Platform
+                        </div>
+                        <div class="para_text">
+                            Full-featured online shopping platform with cart management, payment integration, and admin
+                            dashboard.
+                        </div>
+                        <div class="sub_btn">
+                            <div class="frame">
+                                <div class="frame_text">React</div>
+                            </div>
+                            <div class="frame">
+                                <div class="frame_text">React</div>
+                            </div>
+                            <div class="frame">
+                                <div class="frame_text">React</div>
+                            </div>
+                            <div class="frame">
+                                <div class="frame_text">React</div>
+                            </div>
+                            <div class="frame">
+                                <div class="frame_text">React</div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button class="btn1"><a href="#">Live Demo</a></button>
+                            <button><a href="#">Code</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
