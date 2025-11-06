@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .touch_container {
+            padding: 30px 100px 30px 100px;
+            border: 2px solid red;
+            background-color: gray;
+        }
+
+        .touch_container .touch_container_head .touch_head h1 {
+            text-align: center;
+        }
+
+        .touch_container .touch_container_head .touch_para {
+            opacity: 70%;
+            text-align: center;
+        }
+        .touch_container_body{
+           width: 1000px;
+           border: 2px solid red;
+           margin-top: 50px;
+           display: flex;
+           /* gap: 10px; */
+        }
+        .form_section{
+             width: 500px;
+            height: 300px;
+            background-color: white;
+        }
+         .form_section form{
+            width: 300px;
+            padding: 20px ;
+
+        }
+         .form_section form input{
+            border: none;
+            border-radius: 20px;
+            padding: 0 0 0 10px;
+            width: 450px;
+            height: 40px;
+            background-color: antiquewhite;
+         }
+         /* .form_section form input::placeholder{
+            margin-left: 20px;
+         } */
+         button{
+            width: 450px;
+            height: 50px;
+            background-color: black;
+            border-radius: 10px;
+         }
+         button a{
+            color: white;
+            text-decoration: none;
+         }
+         .connect_section{
+            height: 600px;
+            width: 500px;
+         }
+    </style>
+</head>
+
+<body>
+
+    <section class="get_in_touch">
+        <div class="touch_container">
+            <div class="touch_container_head">
+                <div class="touch_head">
+                    <h1>Get In Touch</h1>
+                </div>
+                <div class="touch_para">
+                    Have a project in mind or want to collaborate? Feel free to reach out!
+                </div>
+            </div>
+            <div class="touch_container_body">
+                <div class="form_section">
+                    <form action="">
+                        <label for="name">Name <br>
+                            <input type="text" placeholder="Your Name">
+                        </label> <br>
+                        <label for="email">Email <br>
+                            <input type="email" placeholder="your.email@exampole.com">
+                        </label><br>
+                        <label for="message">Message <br>
+                            <input type="text-area" placeholder="Tell me about your project..">
+
+                        </label><br><br>
+                        <button><a href="#">Send Message</a></button>
+
+                    </form>
+                </div>
+                <div class="connect_section">
+                    <div class="connect">
+
+                    </div>
+                    <div class="follow_me">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
