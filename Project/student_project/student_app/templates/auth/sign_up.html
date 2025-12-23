@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sign Up
+{% endblock title %}
+
+{% block content %}
+<!-- Sign Up -->
+<section id="signup">
+    <h2>Sign Up</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label>Name</label>
+        <input type="text" name = "username" id = "username">
+
+        <label>Email</label>
+        <input type="email" name = "email">
+
+        <label>Password</label>
+        <input type="password" name = "password">
+
+        <button type="submit">Sign Up</button>
+    </form>
+</section>
+{% endblock content %}

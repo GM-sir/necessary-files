@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+Show Student
+{% endblock title %}
+
+{% block content %}
+<!-- Show Student -->
+<section id="show">
+    <h2>Show Students</h2>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+        {% for student in students %}
+            <tr>
+            <td>
+                {% if student.image %}
+                   <img src="{{student.image.url}}" width="50">
+
+                {% else %}
+                    No photo
+                {% endif %}
+               </td>
+            <td>{{student.full_name}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.dob}}</td>
+            <td>{{student.gender| title}}</td>
+            <td>{{student.address}}</td>
+            <td>
+                <a href="{% url 'update_student' student.id %}">Update</a>
+                <a href="{% url 'delete_student' student.id %}">Delete</a>
+            </td>
+            </tr>
+        {% endfor %}
+    </table>
+</section>
+
+{% endblock content %}

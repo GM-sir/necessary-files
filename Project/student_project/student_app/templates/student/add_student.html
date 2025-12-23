@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Student
+{% endblock title %}
+
+{% block content %}
+<!-- Add Student -->
+<section id="add">
+    <h2>Add Student</h2>
+    <form enctype="multipart/form-data" method = "POST">
+        {% csrf_token %}
+        <label>Student ID</label>
+        <input type="text" Name= "student_id">
+
+        <label>Full Name</label>
+        <input type="text" Name= "full_name">
+
+        <label>Department</label>
+        <input type="text" Name= "department">
+
+        <label>Date of Birth</label>
+        <input type="date" Name= "dob">
+
+        <label>Gender</label>
+        <select Name= "gender">
+            <option>Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <label>Address</label>
+        <textarea rows="3" Name= "address"></textarea>
+
+        <label>Student Image</label>
+        <input type="file" Name= "image">
+
+        <button type="submit">Add Student</button>
+    </form>
+</section>
+{% endblock content %}

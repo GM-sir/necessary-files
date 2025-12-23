@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Update Student
+{% endblock title %}
+
+{% block content %}
+<section id="add">
+    <h2>Update Student</h2>
+    <form enctype="multipart/form-data" method = "POST">
+        {% csrf_token %}
+        <label>Student ID</label>
+        <input type="text" Name= "student_id" value="{{student.student_id}}">
+
+        <label>Full Name</label>
+        <input type="text" Name= "full_name" value="{{student.full_name}}">
+
+        <label>Department</label>
+        <input type="text" Name= "department" value="{{student.department}}">
+
+        <label>Date of Birth</label>
+        <input type="date" Name= "dob" value="{{student.dob| date:'Y-m-d'}}">
+
+       <label>Gender</label>
+        <select name="gender">
+            <option value="">Select</option>
+
+            <option value="male" {% if student.gender|lower == "male" %}selected{% endif %}>
+                Male
+            </option>
+
+            <option value="female" {% if student.gender|lower == "female" %}selected{% endif %}>
+                Female
+            </option>
+        </select>
+
+
+        <label>Address</label>
+        <textarea rows="3" Name= "address">{{student.address}}</textarea>
+
+        <label>Student Image</label>
+        {% if student.image %}
+         <img src="{{ student.image.url }}" width="50">
+        {% endif %}
+        <input type="file" Name= "image" >
+
+        <button type="submit">Add Student</button>
+    </form>
+</section>
+{% endblock content %}

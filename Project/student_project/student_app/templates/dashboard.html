@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'Student_app/css/style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    
+    <a class="logout" href="">Logout</a>
+</div>
+
+<div class="container">
+    {% csrf_token %}
+    <h2>Welcome, {{ user.username }} 👋</h2>
+
+    <div class="card">
+        <h3>Profile</h3>
+        <p>Email: {{ user.email }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Status</h3>
+        <p>You are logged in successfully ✅</p>
+    </div>
+</div>
+
+</body>
+</html>
